@@ -10,10 +10,10 @@ import "../fonts.css";
 		<meta name="generator" content={Astro.generator} />
 		<title>beaconDB</title>
 	</head>
-	<body>
-    <main class="mt-20 mx-auto max-w-xl p-8 prose">
+	<body class="bg-neutral-950 mt-16 mb-8">
+    <main class="mx-auto max-w-xl p-8 prose prose-neutral prose-invert">
 			<header>
-				<h1 class="text-3xl font-semibold flex items-end gap-2">
+				<h1 class="text-3xl font-semibold flex items-end gap-2 text-teal-400">
 					<svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24"><path fill="currentColor" d="M4.93 4.93A9.97 9.97 0 0 0 2 12c0 2.76 1.12 5.26 2.93 7.07l1.41-1.41A7.94 7.94 0 0 1 4 12c0-2.21.89-4.22 2.34-5.66zm14.14 0l-1.41 1.41A7.96 7.96 0 0 1 20 12c0 2.22-.89 4.22-2.34 5.66l1.41 1.41A9.97 9.97 0 0 0 22 12c0-2.76-1.12-5.26-2.93-7.07M7.76 7.76A5.98 5.98 0 0 0 6 12c0 1.65.67 3.15 1.76 4.24l1.41-1.41A4 4 0 0 1 8 12c0-1.11.45-2.11 1.17-2.83zm8.48 0l-1.41 1.41A4 4 0 0 1 16 12c0 1.11-.45 2.11-1.17 2.83l1.41 1.41A5.98 5.98 0 0 0 18 12c0-1.65-.67-3.15-1.76-4.24M12 10a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"/></svg>
 					beaconDB
 				</h1>
@@ -28,7 +28,12 @@ import "../fonts.css";
 				<li><b>abuse resistant</b>: published data cannot be used to create fake observations</p>
 			</ul>
 
-			<p>interested? <a href="https://github.com/beacondb">join the discussion</a></p>
+			<p>interested? <a class="text-teal-400" href="https://github.com/beacondb">join the discussion</a></p>
 		</main>
+
+		<div class="flex flex-col p-8 max-w-3xl mx-auto gap-2 items-center">
+			<img src="/plot.avif" />
+			<p class="text-neutral-500 max-w-md">map of all cell locations submitted to mozilla location services before <a class="underline" href="https://github.com/mozilla/ichnaea/issues/2065">being shutdown</a></p>
+		</div>
 	</body>
 </html>
