@@ -3,38 +3,76 @@ import "../fonts.css";
 ---
 
 <html lang="en">
-	<!-- source code: https://github.com/beacondb/beacondb.net -->
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>beaconDB</title>
-	</head>
-	<body class="bg-neutral-950 mt-16 mb-8">
-    <main class="mx-auto max-w-xl p-8 prose prose-neutral prose-invert">
-			<header>
-				<h1 class="text-3xl font-semibold flex items-end gap-2 text-teal-400">
-					<svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24"><path fill="currentColor" d="M4.93 4.93A9.97 9.97 0 0 0 2 12c0 2.76 1.12 5.26 2.93 7.07l1.41-1.41A7.94 7.94 0 0 1 4 12c0-2.21.89-4.22 2.34-5.66zm14.14 0l-1.41 1.41A7.96 7.96 0 0 1 20 12c0 2.22-.89 4.22-2.34 5.66l1.41 1.41A9.97 9.97 0 0 0 22 12c0-2.76-1.12-5.26-2.93-7.07M7.76 7.76A5.98 5.98 0 0 0 6 12c0 1.65.67 3.15 1.76 4.24l1.41-1.41A4 4 0 0 1 8 12c0-1.11.45-2.11 1.17-2.83zm8.48 0l-1.41 1.41A4 4 0 0 1 16 12c0 1.11-.45 2.11-1.17 2.83l1.41 1.41A5.98 5.98 0 0 0 18 12c0-1.65-.67-3.15-1.76-4.24M12 10a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"/></svg>
-					beaconDB
-				</h1>
-				<p class="lead">public wireless geolocation data</p>
-			</header>
+  <!-- source code: https://github.com/beacondb/beacondb.net -->
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>beaconDB</title>
+  </head>
+  <body class="bg-neutral-950 mt-16 mb-32 p-4">
+    <header class="max-w-2xl mx-auto prose prose-neutral prose-invert mb-4">
+      <h1
+        class="text-3xl font-semibold flex items-end gap-2 text-teal-400 mb-0"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="2rem"
+          height="2rem"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M4.93 4.93A9.97 9.97 0 0 0 2 12c0 2.76 1.12 5.26 2.93 7.07l1.41-1.41A7.94 7.94 0 0 1 4 12c0-2.21.89-4.22 2.34-5.66zm14.14 0l-1.41 1.41A7.96 7.96 0 0 1 20 12c0 2.22-.89 4.22-2.34 5.66l1.41 1.41A9.97 9.97 0 0 0 22 12c0-2.76-1.12-5.26-2.93-7.07M7.76 7.76A5.98 5.98 0 0 0 6 12c0 1.65.67 3.15 1.76 4.24l1.41-1.41A4 4 0 0 1 8 12c0-1.11.45-2.11 1.17-2.83zm8.48 0l-1.41 1.41A4 4 0 0 1 16 12c0 1.11-.45 2.11-1.17 2.83l1.41 1.41A5.98 5.98 0 0 0 18 12c0-1.65-.67-3.15-1.76-4.24M12 10a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2"
+          ></path>
+        </svg>
+        beaconDB
+      </h1>
+      <p class="lead mt-2">publicly sourced, publicly licensed</p>
+      <p class="font-semibold">
+        an in-development wireless geolocation database with public domain data
+        dumps
+      </p>
+    </header>
 
-			<!-- <h2 class="text-xl font-semibold">plans</h2> -->
-			<ul>
-				<li><b>by the public, for the public</b>: data dumps will be released weekly under a public domain license</li>
-				<li><b>ethical data collection</b>: data contribution will be opt-in</li>
-				<li><b>privacy friendly</b>: hashing access point identifiers protects personal information from being leaked</li>
-				<li><b>abuse resistant</b>: published data cannot be used to create fake observations</p>
-			</ul>
+    <img class="max-w-7xl w-full mx-auto" src="/plot.avif" />
 
-			<p>interested? <a class="text-teal-400" href="https://github.com/beacondb/beacondb">join the discussion</a></p>
-		</main>
+    <div class="mx-auto max-w-2xl prose prose-neutral prose-invert">
+      <ul>
+        <li><b>ethically sourced</b>: opt-in only data collection</li>
+        <li><b>privacy friendly</b>: access point identifiers are hashed</li>
+        <li>
+          <b>abuse resistant</b>: updating existing data requires information
+          only available in physical range of a beacon
+        </li>
+      </ul>
 
-		<div class="flex flex-col p-8 max-w-3xl mx-auto gap-2 items-center">
-			<img src="/plot.avif" />
-			<p class="text-neutral-500 max-w-md">map of all cell locations submitted to mozilla location services before <a class="underline" href="https://github.com/mozilla/ichnaea/issues/2065">being shutdown</a></p>
-		</div>
-	</body>
+      <p>
+        beaconDB is currently
+        <a href="https://github.com/beacondb/beacondb">in development</a>
+        and not yet accepting data. however, you can still start collecting nearby
+        networks now to upload later. beaconDB plans to support importing data from:
+      </p>
+      <ul>
+        <li>
+          <a href="https://github.com/christianrowlands/android-network-survey"
+            >Network Survey</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/mjaakko/NeoStumbler">NeoStumbler</a>
+        </li>
+        <li>
+          <a href="https://github.com/wiglenet/wigle-wifi-wardriving">WiGLE</a> -
+          only networks you have collected
+        </li>
+        <li>
+          wifi network beacon frames <a href="https://www.tcpdump.org/"
+            >captured in PCAP-NG format</a
+          > along with separate GPX tracks
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>
