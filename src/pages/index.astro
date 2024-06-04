@@ -31,7 +31,7 @@ import "../fonts.css";
       </h1>
       <p class="lead mt-2">publicly sourced, publicly licensed</p>
       <p class="font-semibold">
-        an in-development wireless geolocation database with public domain data
+        an experimental wireless geolocation database with public domain data
         dumps
       </p>
     </header>
@@ -48,30 +48,86 @@ import "../fonts.css";
         </li>
       </ul>
 
+      <h2>contribute</h2>
       <p>
-        beaconDB is currently
-        <a href="https://github.com/beacondb/beacondb">in development</a>
-        and not yet accepting data. however, you can still start collecting nearby
-        networks now to upload later. beaconDB plans to support importing data from:
+        beaconDB is now accepting submissions! to add coverage for your area you
+        can use the following apps on your phone:
       </p>
       <ul>
         <li>
-          <a href="https://github.com/christianrowlands/android-network-survey"
-            >Network Survey</a
-          >
+          <a href="https://github.com/mjaakko/NeoStumbler">NeoStumbler</a>:
+          supports cell towers, wifi networks and bluetooth devices
+          <ul>
+            <li>
+              in the Settings tab, set the endpoint to <code
+                >https://beacondb.net</code>
+            </li>
+          </ul>
         </li>
         <li>
-          <a href="https://github.com/mjaakko/NeoStumbler">NeoStumbler</a>
+          <a href="https://github.com/zamojski/TowerCollector"
+            >Tower Collector</a
+          >: only supports cell towers
+          <ul>
+            <li>
+              in Upload Preferences, enable support for custom MLS services and
+              set the address to <code>https://beacondb.net/v2/geosubmit</code>
+            </li>
+          </ul>
         </li>
+      </ul>
+      <p>
+        data you submit is aggregated and shared under a public domain license.
+        for more information on how data you submit is handled, see the
+        <a href="/privacy">privacy notice</a>.
+      </p>
+
+      <h2>usage</h2>
+      <p>
+        <b
+          >beaconDB is currently experimental - do not use for anything critical</b>
+      </p>
+
+      <p>
+        beaconDB hosts an endpoint at <code
+          >https://beacondb.net/v1/geolocate</code
+        > which accepts requests in the same format as MLS.
+      </p>
+      <p>
+        as beaconDB is starting from scratch there is likely no wifi coverage
+        for your area. if beaconDB can't estimate your location using wifi, it
+        will fallback to an approximate cell tower location sourced from MLS'
+        final data dump. note that submissions will take at least 5 minutes to
+        become available in the beaconDB API.
+      </p>
+      <p>
+        if you own an Android phone running <a href="https://microg.org/"
+          >microG</a
+        >, you can easily give beaconDB a spin:
+        <ul>
+          <li>
+            the latest microG location engine allows you to set a custom
+            location service endpoint in microG settings
+          </li>
+          <li>
+            not all ROMs have implemented support for the new location engine -
+            you can use beaconDB with <a
+              href="https://github.com/microg/UnifiedNlp">UnifiedNlp</a
+            > instead by installing <a
+              href="https://github.com/beacondb/beacondb-unifiednlp/releases/tag/v1.6.0"
+              >this backend</a>
+          </li>
+        </ul>
+      </p>
+
+      <h2>links</h2>
+      <ul>
         <li>
-          <a href="https://github.com/wiglenet/wigle-wifi-wardriving">WiGLE</a> -
-          only networks you have collected
+          source code <a href="https://github.com/beacondb/beacondb"
+            >on GitHub</a>
         </li>
-        <li>
-          wifi network beacon frames <a href="https://www.tcpdump.org/"
-            >captured in PCAP-NG format</a
-          > along with separate GPX tracks
-        </li>
+        <li>made by <a href="https://joel.net.au/">Joel Koen</a></li>
+        <li><a href="/privacy">privacy notice</a></li>
       </ul>
     </div>
   </body>
