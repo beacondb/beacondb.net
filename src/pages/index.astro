@@ -60,7 +60,8 @@ import "../fonts.css";
           <ul>
             <li>
               in the Settings tab, set the endpoint to <code
-                >https://beacondb.net</code>
+                >https://beacondb.net</code
+              >
             </li>
           </ul>
         </li>
@@ -85,7 +86,8 @@ import "../fonts.css";
       <h2>usage</h2>
       <p>
         <b
-          >beaconDB is currently experimental - do not use for anything critical</b>
+          >beaconDB is currently experimental - do not use for anything critical</b
+        >
       </p>
 
       <p>
@@ -94,37 +96,27 @@ import "../fonts.css";
         > which accepts requests in the same format as MLS.
       </p>
       <p>
+        if you own an Android phone running the latest preview version of <a
+          href="https://microg.org/">microG</a
+        >, you can easily give beaconDB a spin without needing to install
+        anything. in microG Settings on the Location page, pressing the three
+        dots in the top right lets you set a custom service URL. you can set
+        this to <code>https://beacondb.net/</code> to give beaconDB a try.
+      </p>
+      <p>
         as beaconDB is starting from scratch there is likely no wifi coverage
         for your area. if beaconDB can't estimate your location using wifi, it
         will fallback to an approximate cell tower location sourced from MLS'
         final data dump. note that submissions will take at least 5 minutes to
         become available in the beaconDB API.
       </p>
-      <p>
-        if you own an Android phone running <a href="https://microg.org/"
-          >microG</a
-        >, you can easily give beaconDB a spin:
-        <ul>
-          <li>
-            the latest microG location engine allows you to set a custom
-            location service endpoint in microG settings
-          </li>
-          <li>
-            not all ROMs have implemented support for the new location engine -
-            you can use beaconDB with <a
-              href="https://github.com/microg/UnifiedNlp">UnifiedNlp</a
-            > instead by installing <a
-              href="https://github.com/beacondb/beacondb-unifiednlp/releases/tag/v1.6.0"
-              >this backend</a>
-          </li>
-        </ul>
-      </p>
 
       <h2>links</h2>
       <ul>
         <li>
           source code <a href="https://github.com/beacondb/beacondb"
-            >on GitHub</a>
+            >on GitHub</a
+          >
         </li>
         <li>made by <a href="https://joel.net.au/">Joel Koen</a></li>
         <li><a href="/privacy">privacy notice</a></li>
