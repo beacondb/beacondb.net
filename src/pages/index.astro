@@ -59,6 +59,12 @@ import "../fonts.css";
           supports cell towers, wifi networks and bluetooth devices
           <ul>
             <li>
+              <a
+                href="https://f-droid.org/packages/xyz.malkki.neostumbler.fdroid/"
+                >download on F-Droid</a
+              >
+            </li>
+            <li>
               in the Settings tab, set the endpoint to <code
                 >https://beacondb.net</code
               >
@@ -71,6 +77,17 @@ import "../fonts.css";
           >: only supports cell towers
           <ul>
             <li>
+              <a
+                href="https://f-droid.org/packages/info.zamojski.soft.towercollector/"
+                >download on F-Droid</a
+              >
+              or
+              <a
+                href="https://play.google.com/store/apps/details?id=info.zamojski.soft.towercollector"
+                >Google Play</a
+              >
+            </li>
+            <li>
               in Upload Preferences, enable support for custom MLS services and
               set the address to <code>https://beacondb.net/v2/geosubmit</code>
             </li>
@@ -78,23 +95,18 @@ import "../fonts.css";
         </li>
       </ul>
       <p>
-        data you submit is aggregated and shared under a public domain license.
-        for more information on how data you submit is handled, see the
+        data you submit will be aggregated and shared under a public domain
+        license. for more information on how your data is handled, see the
         <a href="/privacy">privacy notice</a>.
       </p>
 
       <h2>usage</h2>
       <p>
-        <b
-          >beaconDB is currently experimental - do not use for anything critical</b
-        >
+        <b>
+          beaconDB is experimental and should not be used by critical services
+        </b>
       </p>
 
-      <p>
-        beaconDB hosts an endpoint at <code
-          >https://beacondb.net/v1/geolocate</code
-        > which accepts requests in the same format as MLS.
-      </p>
       <p>
         if you own an Android phone running the latest preview version of <a
           href="https://microg.org/">microG</a
@@ -111,15 +123,34 @@ import "../fonts.css";
         become available in the beaconDB API.
       </p>
 
-      <h2>links</h2>
+      <h2>developers</h2>
+      <p>
+        beaconDB hosts an endpoint at
+        <code>https://beacondb.net/v1/geolocate</code> which is compatible with <a
+          href="https://ichnaea.readthedocs.io/en/latest/api/geolocate.html"
+          >Ichnaea's request format</a
+        >. if your software has a large amount of users, please don't use this
+        as a default location service. beaconDB infrastructure is not yet
+        capable of handling a large amount of requests.
+      </p>
+      <p>
+        data dumps are currently not available as I'm still researching the
+        measures I need to take to protect the privacy of both contributors and
+        AP owners.
+      </p>
+
+      <hr />
       <ul>
         <li>
-          source code <a href="https://github.com/beacondb/beacondb"
-            >on GitHub</a
+          code <a href="https://github.com/beacondb/beacondb">on GitHub</a>
+          and <a href="https://git.joel.net.au/beacondb/beacondb">self-hosted</a
           >
         </li>
-        <li>made by <a href="https://joel.net.au/">Joel Koen</a></li>
+        <li>
+          <a href="https://github.com/beacondb/beacondb/issues">bug tracker</a>
+        </li>
         <li><a href="/privacy">privacy notice</a></li>
+        <li>made by <a href="https://joel.net.au/">Joel Koen</a></li>
       </ul>
     </div>
   </body>
